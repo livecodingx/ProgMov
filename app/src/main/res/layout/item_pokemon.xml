@@ -61,7 +61,7 @@
                     android:shadowRadius="2"
                     android:textSize="25sp"
                     android:textStyle="bold"
-                    tools:text="Pikachu, 32" />
+                    tools:text="Charmander, 32" />
 
                 <ImageView
                     android:id="@+id/ivVerified"
@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textColor="#CCFBFBFB"
-                android:text="Pokemon de tipo Planta" />
+                android:text="Pokemon de tipo Fire" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

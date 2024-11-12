@@ -34,11 +34,11 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun observeValues() {
         registerViewModel.emailFormatError.observe(this) {
-            Toast.makeText(this, "Formato de correo inválido", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Correo electronico no inválido", Toast.LENGTH_SHORT).show()
         }
 
         registerViewModel.passwordLengthError.observe(this) {
-            Toast.makeText(this, "La contraseña debe tener al menos 8 caracteres", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "La contraseña debe tener almenos 8 caracteres", Toast.LENGTH_SHORT).show()
         }
 
         registerViewModel.passwordMatchError.observe(this) {

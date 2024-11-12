@@ -22,11 +22,11 @@ class LoginActivity : AppCompatActivity() {
 
     private fun observeValues() {
         loginViewModel.inputsError.observe(this) {
-            Toast.makeText(this, "Ingrese los datos completos", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Completo todos lo datos", Toast.LENGTH_SHORT).show()
         }
 
         loginViewModel.authError.observe(this) {
-            Toast.makeText(this, "Error usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
         }
 
         loginViewModel.registerError.observe(this) {

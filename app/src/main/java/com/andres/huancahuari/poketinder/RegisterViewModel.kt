@@ -12,26 +12,22 @@ class RegisterViewModel(private val context: Context) : ViewModel() {
     val passwordMatchError = MutableLiveData<Boolean>()
     val registrationSuccess = MutableLiveData<Boolean>()
 
-    // Crear la instancia del repositorio dentro del ViewModel
     private var sharedPreferencesRepository: SharedPreferencesRepository =
         SharedPreferencesRepository().also {
             it.setSharedPreference(context)
         }
 
     fun registerUser(email: String, password: String, confirmPassword: String) {
-        // Verificar el formato del correo
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             emailFormatError.value = true
             return
         }
 
-        // Verificar la longitud de la contraseña
         if (password.length < 8) {
             passwordLengthError.value = true
             return
         }
 
-        // Verificar si las contraseñas coinciden
         if (password != confirmPassword) {
             passwordMatchError.value = true
             return
